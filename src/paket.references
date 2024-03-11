@@ -1,2 +1,4 @@
 FSharp.Core
 FSharpMyExt
+Fake.DotNet.Cli
+Fake.IO.FileSystem
