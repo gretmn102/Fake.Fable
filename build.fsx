@@ -83,7 +83,7 @@ Target.create "Meta" (fun _ ->
         "    <RepositoryUrl>https://github.com/gretmn102/Fake.Fable.git</RepositoryUrl>"
         sprintf "    <PackageReleaseNotes>%s</PackageReleaseNotes>"
             (String.concat "\n" release.Notes |> XmlText.escape)
-        "    <PackageTags>discord;api;fsharp</PackageTags>"
+        "    <PackageTags>fake;fable;fsharp</PackageTags>"
         "    <Authors>Fering</Authors>"
         sprintf "    <Version>%s</Version>" (string release.SemVer)
         "</PropertyGroup>"
