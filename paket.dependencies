@@ -7,10 +7,6 @@ nuget FSharp.Core < 7
 nuget Fake.DotNet.Cli >= 6 lowest_matching: true
 nuget Fake.IO.FileSystem >= 6 lowest_matching: true
 
-source https://gitlab.com/api/v4/projects/28574921/packages/nuget/index.json
-storage: none
-nuget FSharpMyExt prerelease
-
 group Tests
     strategy: min
     source https://api.nuget.org/v3/index.json
