@@ -12,6 +12,7 @@ type BuildOption =
     {
         Output: string
         IsWatch: bool
+        Run: string
     }
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 [<RequireQualifiedAccess>]
@@ -20,6 +21,7 @@ module BuildOption =
         {
             Output = ""
             IsWatch = false
+            Run = ""
         }
 
 let run fableArgs =
@@ -39,6 +41,11 @@ let build (fableOption: BuildOption) projectPath =
                 "--watch"
             else
                 ""
+
+        yield
+            match fableOption.Run with
+            | null | "" -> ""
+            | cmd -> sprintf "--run \"%s\"" cmd
     ]
     |> run
 
